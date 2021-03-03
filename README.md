@@ -1,23 +1,28 @@
-# 10up WP Scaffold
+# 🧨 10up Performance Demo: Code Splitting
+how to improve **FID**, **TTFB** and **TTI** using Webpack Code Splitting in WordPress.
 
-This scaffold is the starting point for all 10up WordPress projects.
+### 📦 Local setup
+A single-site WordPress installation is required to run the demo locally. This demo was created and worked on through WP Local Docker. That being said, you can also use VVV & Vagrant or Local by Flywheel if you are more comfortable with those services.
+### 💎 Clone the repo
+This repo is intended to replace the `wp-content` folder.
+1. `rm -rf wp-content` to remove the default wp-content folder
+2. `git clone https://github.com/dainemawer/10up-performance-demo wp-content` to clone all new files into a new `wp-content` folder.
+3. Run `composer install && npm install` in the `wp-content` root.
+4. Run `composer install && npm install` in the `themes/performance` root.
+5. Activate the theme in Dashboard -> Appearance -> Themes
+### 🏷 Branches
+- `trunk` contains all the stable code for the repo, ideally try not to merge anything in there.
+- `feature-no-code-splitting` contains statically imported JS that has bloated the bundle size.
+- `feature-code-splitting` contains the amended configuration for code splitting in the theme.
+- Each branch includes WebPackBundle Analyzer as well as the Web Vitals JS package.
+- Make sure you run `npm run build` or `npm run watch` to see the changes on each branch when you switch between branches.
 
-It contains a bare bones theme and must use plugin for you to base your development off of. Asset bundling is handled entirely by [10up Scripts](https://github.com/10up/10up-scripts).
+### 🧰 What to look out for
+Ideally, we want to see a dramatic difference in bundle size and a number of cache-able chunks which could be prefetched or preloaded
+based on the projects needs. This bundle size and chunk size can measured in the terminal output of `npm run build`
+### 📇 Authors
+written and demonstrated by [Chelsea Skovgaard](https://github.com/chelseaskovgaard) and [Daine Mawer](https://github.com/dainemawer)
 
-## How to Use
+### 💡 Questions
+Feel free to email [Chelsea](mailto:chelsea.skovgaard@10up.com) or [Daine](mailto:daine.mawer@10up.com)
 
-1. [Download a zip](https://github.com/10up/wp-scaffold/archive/trunk.zip) of the repository into your project. At 10up, by default we version control the `wp-content` directory (ignoring obvious things like `uploads`). This enables us to have plugins, theme, etc. all in one repository. Having separate repositories for each plugin and theme only happens in rare circumstances that are outside of our control.
-2. Take what you need. If your project doesn't have a theme, remove the theme. If your project doesn't need any plugin functionality, remove the MU plugin. If your plugin doesn't need CSS/JS, remove it. If your plugin doesn't need to be translated, remove all the translation functionality.
-3. Compiling, minifying, bundling, etc. of JavaScript and CSS is all done by [10up Scripts](https://github.com/10up/10up-scripts). 10up Scripts is included as a dev dependency in both the plugin and theme. If you want to develop on the theme (and vice-versa the plugin), you would navigate to the theme directory in your console and run `npm run start` (after running `npm install` first of course). Inside `package.json` edit `@10up/scripts.devURL` to your local development URL for BrowserSync to work properly. `@10up/scripts.entry` are the paths to CSS/JS files that need to be bundled. Edit these as needed.
-
-## Scaffold Rules
-
-Much of the functionality in the scaffold is intended to be optional depending on the needs of your project e.g. i18n functionality. However, there are a few important principles that you must follow:
-
-1. [10up Scripts](https://github.com/10up/10up-scripts) must be used for asset bundling. Over the years we've found differences in how assets are built across projects to be very confusing for engineers.  As such, we are standardizing on 10up Scripts (which you can extend as needed). 10up Scripts contains in depth docs on how it works.
-2. Functionality should be built into the 10up must-use functionality as much as possible. Presentation should be kept in the theme. Separating these two makes long term development, maintenance, and extensibility much easier.
-3. Blocks should be built into the theme and follow the [example block](https://github.com/10up/wp-scaffold/tree/trunk/themes/10up-theme/includes/blocks/example-block) provided.
-
-## Block Library
-
-Make sure to look at the blocks in the [10up Block Library](https://github.com/10up/block-library) to see if anything can be used on your project. All the blocks in the library are extremely extensible so you can customize everything for your project needs.
