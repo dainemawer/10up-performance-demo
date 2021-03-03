@@ -1,5 +1,5 @@
 /**
- * Utility Component
+ * ⚙️ Utility Component
  * This is an example component.
  *
  * @return void

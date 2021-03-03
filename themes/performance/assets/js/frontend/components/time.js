@@ -1,5 +1,5 @@
 /**
- * Time Component
+ * ⏰ Time Component
  * This is an example component.
  *
  * @return void

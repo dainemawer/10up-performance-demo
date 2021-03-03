@@ -1,5 +1,5 @@
 /**
- * Sticky Component
+ * 🗞 Sticky Component
  * This is an example component.
  *
  * @return void

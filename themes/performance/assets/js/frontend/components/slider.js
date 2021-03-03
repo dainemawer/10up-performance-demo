@@ -1,5 +1,5 @@
 /**
- * Slider Component
+ * 🗳 Slider Component
  * This is an example component.
  *
  * @return void

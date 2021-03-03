@@ -1,5 +1,5 @@
 /**
- * Navigation Component
+ * 🎚 Navigation Component
  * This is an example component.
  *
  * @return void

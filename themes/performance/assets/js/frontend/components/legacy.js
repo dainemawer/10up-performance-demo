@@ -1,5 +1,5 @@
 /**
- * jQuery
+ * 🩹 jQuery
  * Components that rely on $
  *
  * @return void

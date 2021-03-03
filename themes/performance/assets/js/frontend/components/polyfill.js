@@ -1,5 +1,5 @@
 /**
- * Polyfill Component
+ * 📋 Polyfill Component
  * This is an example component.
  *
  * @return void

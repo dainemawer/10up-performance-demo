@@ -1,5 +1,5 @@
 /**
- * Modal Component
+ * 🔌 Modal Component
  * This is an example component.
  *
  * @return void

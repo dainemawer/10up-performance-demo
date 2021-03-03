@@ -1,5 +1,5 @@
 /**
- * Accordion Component
+ * 🎛 Accordion Component
  * This is an example component.
  *
  * @return void

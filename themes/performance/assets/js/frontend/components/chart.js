@@ -1,5 +1,5 @@
 /**
- * Chart Component
+ * 📊 Chart Component
  * This is an example component.
  *
  * @return void
