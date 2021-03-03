@@ -20,6 +20,14 @@ This repo is intended to replace the `wp-content` folder.
 ### 🧰 What to look out for
 Ideally, we want to see a dramatic difference in bundle size and a number of cache-able chunks which could be prefetched or preloaded
 based on the projects needs. This bundle size and chunk size can measured in the terminal output of `npm run build`
+
+### Further Reading
+- [Code Splitting with Webpack](https://webpack.js.org/guides/code-splitting/)
+- [Lazy Loading with Webpack](https://webpack.js.org/guides/lazy-loading/)
+- [10up Internal Post on Code Splitting](https://internal.10up.com/blog/2021/01/07/code-splitting-and-dynamic-import-syntax-in-javascript/)
+
+### Link to Presentation
+_insert presentation link here_
 ### 📇 Authors
 written and demonstrated by [Chelsea Skovgaard](https://github.com/chelseaskovgaard) and [Daine Mawer](https://github.com/dainemawer)
 
