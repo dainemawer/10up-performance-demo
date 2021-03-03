@@ -17,8 +17,21 @@
     "@10up/scripts": "^1.2.0"
   },
   "dependencies": {
+    "@10up/component-accordion": "^1.1.0",
+    "@10up/component-navigation": "^2.0.3",
+    "@10up/component-tabs": "^1.0.3",
+    "a11y-dialog": "^6.1.0",
+    "bluebird": "^3.7.2",
+    "chart.js": "^2.9.4",
+    "core-js": "^3.9.1",
+    "handlebars": "^4.7.7",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
     "normalize.css": "^8.0.1",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "stickybits": "^3.7.9",
+    "tiny-slider": "^2.9.3"
   },
   "@10up/scripts": {
     "devURL": "https://my-project.test",
