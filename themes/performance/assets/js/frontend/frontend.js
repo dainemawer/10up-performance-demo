@@ -1,27 +1,23 @@
-import {getFID} from 'web-vitals';
-import Accordion from './components/accordion';
-import Modal from './components/modal';
-import Navigation from './components/navigation';
-import Sticky from './components/sticky';
-import Tabs from './components/tabs';
-import Time from './components/time';
-import Utility from './components/utility';
-import Polyfill from './components/polyfill';
-import Chart from './components/chart';
-import Slider from './components/slider';
+/**
+ * 🧰 Frontend Entry file
+ * Import and run a module if a selector is present.
+ *
+ * @param {string} module Module filename.
+ * @param {string} [selector] Selector to check as a condition for importing.
+ */
+
+import { importAndRun } from './components/importAndRun';
+
+importAndRun('slider', '.slide-show');
+importAndRun('accordion', '.accordion');
+importAndRun('modal', '.modal');
+importAndRun('navigation', '.navigation');
+importAndRun('sticky', '.sticky');
+importAndRun('tabs', '.tabs');
+importAndRun('time', '.time');
+importAndRun('utility', 'body');
+importAndRun('polyfill', 'body');
+importAndRun('legacy', '.is-jquery');
+importAndRun('chart', '.chart');
 
 getFID(console.log); // eslint-disable-line
-
-// eslint-disable-next-line @wordpress/no-global-event-listener
-document.addEventListener('DOMContentLoaded', () => {
-	Accordion();
-	Modal();
-	Navigation();
-	Sticky();
-	Tabs();
-	Time();
-	Utility();
-	Polyfill();
-	Chart();
-	Slider();
-});

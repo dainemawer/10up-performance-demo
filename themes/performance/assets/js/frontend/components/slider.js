@@ -5,7 +5,7 @@
  * @return void
  */
 
-import { tns } from 'tiny-slider/src/tiny-slider.js';
+import { tns } from 'tiny-slider/src/tiny-slider';
 
 const Slider = () => {
 	const slider = tns({

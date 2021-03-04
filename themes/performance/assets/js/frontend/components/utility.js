@@ -10,7 +10,7 @@ const Utility = () => {
 	const myPromise = new Promise((resolve, reject) => {
 		setTimeout(() => {
 			resolve('foo');
-			reject();
+			reject(new Error('Error'));
 		}, 300);
 	});
 

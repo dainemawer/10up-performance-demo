@@ -3,5 +3,9 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = {
 	...defaultConfig,
+	output: {
+		chunkFilename: '[name].bundle.js',
+		publicPath: '/wp-content/themes/performance/dist/',
+	},
 	plugins: [...defaultConfig.plugins, new BundleAnalyzerPlugin()],
 };
