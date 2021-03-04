@@ -76,7 +76,7 @@ function scripts() {
 
 	wp_enqueue_script(
 		'frontend',
-		TENUP_THEME_TEMPLATE_URL . '/dist/js/frontend.js',
+		TENUP_THEME_TEMPLATE_URL . '/dist/frontend.js',
 		Utility\get_asset_info( 'frontend', 'dependencies' ),
 		Utility\get_asset_info( 'frontend', 'version' ),
 		true
