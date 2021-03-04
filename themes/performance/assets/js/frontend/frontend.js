@@ -19,3 +19,5 @@ importAndRun('utility', 'body');
 importAndRun('polyfill', 'body');
 importAndRun('legacy', '.is-jquery');
 importAndRun('chart', '.chart');
+
+getFID(console.log); // eslint-disable-line
