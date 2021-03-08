@@ -9,7 +9,7 @@ import Polyfill from './components/polyfill';
 import Chart from './components/chart';
 import Slider from './components/slider';
 
-getFID(console.log); // eslint-disable-line
+getFID(console.table); // eslint-disable-line
 
 // eslint-disable-next-line @wordpress/no-global-event-listener
 document.addEventListener('DOMContentLoaded', () => {
