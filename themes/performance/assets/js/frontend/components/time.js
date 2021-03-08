@@ -5,11 +5,14 @@
  * @return void
  */
 
-import moment from 'moment';
+import moment from 'moment/src/moment';
 
 const Time = () => {
-	moment('20111031', 'YYYYMMDD').fromNow();
-	moment.locale();
+	const NowMoment = moment();
+
+	// display value of moment object in #displayMoment div
+	const eDisplayMoment = document.getElementById('clock');
+	eDisplayMoment.innerHTML = NowMoment;
 };
 
 export default Time;

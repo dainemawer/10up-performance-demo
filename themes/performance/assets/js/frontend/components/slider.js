@@ -10,9 +10,11 @@ import { tns } from 'tiny-slider/src/tiny-slider';
 const Slider = () => {
 	const slider = tns({
 		container: '.my-slider',
-		items: 3,
+		items: 1,
 		slideBy: 'page',
 		autoplay: true,
+		controls: false,
+		nav: false,
 	});
 
 	return slider;

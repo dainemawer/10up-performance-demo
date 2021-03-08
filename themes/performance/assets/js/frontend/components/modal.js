@@ -7,8 +7,9 @@
 import A11yDialog from 'a11y-dialog';
 
 const Modal = () => {
-	const container = document.querySelector('#my-dialog-container');
-	const dialog = new A11yDialog(container);
+	const dialogEl = document.getElementById('my-dialog');
+	const mainEl = document.querySelector('main');
+	const dialog = new A11yDialog(dialogEl, mainEl);
 
 	return dialog;
 };
