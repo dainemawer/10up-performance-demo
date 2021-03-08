@@ -8,14 +8,7 @@
 import Tabs from '@10up/component-tabs';
 
 const TabComponent = () => {
-	const tabs = new Tabs('.tabs', {
-		onCreate() {
-			console.log('onCreate callback');
-		},
-		onTabChange() {
-			console.log('onTabChange callback');
-		},
-	});
+	const tabs = new Tabs('.tabs');
 
 	return tabs;
 };

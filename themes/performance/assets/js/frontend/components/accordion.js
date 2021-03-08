@@ -7,20 +7,7 @@
 import Accordion from '@10up/component-accordion';
 
 const AccordionBlock = () => {
-	const accordion = new Accordion('.accordion', {
-		onCreate() {
-			console.log('onCreate callback');
-		},
-		onOpen() {
-			console.log('onOpen callback');
-		},
-		onClose() {
-			console.log('onClose callback');
-		},
-		onToggle() {
-			console.log('onToggle callback');
-		},
-	});
+	const accordion = new Accordion('.accordion');
 
 	return accordion;
 };

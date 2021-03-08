@@ -23,8 +23,14 @@
 
 /* Components */
 
-/* @import url("components/index.css"); */
+@import url("components/index");
 
 /* Gutenberg blocks */
 
 /* @import url("../blocks/index.css"); */
+@import url("bulma/css/bulma.min.css");
+@import url("@10up/component-accordion");
+@import url("@10up/component-tabs");
+@import url("@10up/component-navigation");
+@import url("tiny-slider/dist/tiny-slider.css");
+
