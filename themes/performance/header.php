@@ -75,5 +75,6 @@
 				<div class="hero-body">
 					<h1 class="title"><?php bloginfo('name'); ?></h1>
 					<h2 class="subtitle"><?php esc_html_e('A demo on how code splitting can improve FID'); ?></h2>
+					<h6><?php esc_html_e('Currently Code Splitting'); ?></h6>
 				</div>
 			</section>

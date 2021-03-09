@@ -27,8 +27,10 @@ function setup() {
 	add_action( 'wp_enqueue_scripts', $n( 'styles' ) );
 	add_action( 'wp_head', $n( 'js_detection' ), 0 );
 	add_action( 'wp_head', $n( 'add_manifest' ), 10 );
+	add_action( 'wp_head', $n( 'preload_chunks'), 10 );
 
 	add_filter( 'script_loader_tag', $n( 'script_loader_tag' ), 10, 2 );
+	add_filter( 'script_loader_tag', $n( 'update_script_async' ), 10, 3 );
 }
 
 /**
@@ -77,7 +79,7 @@ function scripts() {
 	wp_enqueue_script(
 		'frontend',
 		TENUP_THEME_TEMPLATE_URL . '/dist/frontend.js',
-		Utility\get_asset_info( 'frontend', 'dependencies' ),
+		[],
 		Utility\get_asset_info( 'frontend', 'version' ),
 		true
 	);
@@ -230,3 +232,24 @@ function script_loader_tag( $tag, $handle ) {
 function add_manifest() {
 	echo "<link rel='manifest' href='" . esc_url( TENUP_THEME_TEMPLATE_URL . '/manifest.json' ) . "' />";
 }
+
+function update_script_async( $tag, $handle ) {
+	switch ( $handle ) {
+		case 'frontend':
+			return str_replace( '<script', '<script async="async"', $tag );
+		default:
+			return $tag;
+	}
+}
+
+function preload_chunks() { ?>
+	<link rel="preload" href="/wp-content/themes/performance/dist/2.bundle.js" as="script" />
+	<link rel="preload" href="/wp-content/themes/performance/dist/10.bundle.js" as="script" />
+	<link rel="preload" href="/wp-content/themes/performance/dist/0.bundle.js" as="script" />
+	<link rel="preload" href="/wp-content/themes/performance/dist/11.bundle.js" as="script" />
+	<link rel="preload" href="/wp-content/themes/performance/dist/3.bundle.js" as="script" />
+	<link rel="preload" href="/wp-content/themes/performance/dist/7.bundle.js" as="script" />
+	<link rel="preload" href="/wp-content/themes/performance/dist/1.bundle.js" as="script" />
+	<link rel="preload" href="/wp-content/themes/performance/dist/4.bundle.js" as="script" />
+<?php }
+
