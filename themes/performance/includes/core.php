@@ -243,6 +243,8 @@ function update_script_async( $tag, $handle ) {
 }
 
 function preload_chunks() { ?>
+	<link rel="dns-prefetch" href="https://source.unsplash.com" />
+	<link rel="dns-prefetch" href="https://jsonplaceholder.typicode.com" />
 	<link rel="preload" href="/wp-content/themes/performance/dist/2.bundle.js" as="script" />
 	<link rel="preload" href="/wp-content/themes/performance/dist/10.bundle.js" as="script" />
 	<link rel="preload" href="/wp-content/themes/performance/dist/0.bundle.js" as="script" />

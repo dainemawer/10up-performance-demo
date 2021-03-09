@@ -11,7 +11,12 @@ export function importAndRun(module, selector) {
 	const shouldImport = selector ? document.querySelector(selector) : true;
 	if (shouldImport) {
 		import(`./${module}`).then((module) => {
-			module.default();
+			if (document.readyState === 'loading') {
+				// eslint-disable-next-line @wordpress/no-global-event-listener
+				window.addEventListener('DOMContentLoaded', module.default);
+			} else {
+				module.default();
+			}
 		});
 	}
 }
