@@ -4,9 +4,10 @@
  *
  * @return void
  */
+import 'whatwg-fetch';
 
 const API = () => {
-	fetch('https://jsonplaceholder.typicode.com/posts')
+	window.fetch('https://jsonplaceholder.typicode.com/posts') // eslint-disable-line
 		.then((response) => response.json())
 		.then((json) => {
 			for (let i = 0; i < json.length; i++) {
